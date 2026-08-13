@@ -1,147 +1,797 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Hamza | Research Portfolio</title>
-<meta name="description" content="Research portfolio of Muhammad Hamza, BS Psychology student at Bahria University, with experience in mixed-methods behavioral research.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Muhammad Hamza | Psychology & Research Portfolio</title>
+
+<meta name="description" content="Muhammad Hamza — BS Psychology student focused on behavioral research and applied psychology.">
+
 <style>
-  :root { --ink:#1f2937; --muted:#667085; --line:#e6e8ec; --paper:#ffffff; --soft:#f7f8fa; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:#f3f4f6; color:var(--ink); font-family:Arial, Helvetica, sans-serif; line-height:1.65; }
-  .page { max-width:900px; margin:36px auto; background:var(--paper); padding:54px 64px; }
-  header { border-bottom:1px solid var(--line); padding-bottom:28px; margin-bottom:34px; }
-  h1 { font-size:36px; line-height:1.15; margin:0 0 8px; letter-spacing:-.5px; }
-  .subtitle { font-size:16px; color:var(--muted); margin:0 0 16px; }
-  .contact { font-size:13px; color:var(--muted); }
-  h2 { font-size:19px; margin:34px 0 12px; letter-spacing:.1px; }
-  h3 { font-size:16px; margin:0 0 4px; }
-  p { margin:0 0 12px; font-size:14px; }
-  .card { background:var(--soft); border:1px solid var(--line); padding:20px; margin:12px 0; border-radius:8px; }
-  .meta { color:var(--muted); font-size:13px; margin-bottom:9px; }
-  ul { margin:8px 0 0 20px; padding:0; font-size:14px; }
-  li { margin:5px 0; }
-  .skills { display:flex; flex-wrap:wrap; gap:8px; }
-  .tag { border:1px solid var(--line); border-radius:999px; padding:5px 10px; font-size:12px; color:#475467; background:#fff; }
-  a { color:#344054; text-decoration:underline; }
-  footer { border-top:1px solid var(--line); margin-top:40px; padding-top:18px; color:var(--muted); font-size:12px; }
-  @media(max-width:700px){ .page{margin:0; padding:32px 24px;} h1{font-size:30px;} }
-  @media print { body{background:#fff;} .page{margin:0; max-width:none; padding:28px;} }
+:root{
+  --ink:#172033;
+  --muted:#667085;
+  --line:#e6eaf0;
+  --soft:#f7f9fc;
+  --accent:#3559a8;
+  --accentsoft:#eef3ff
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  margin:0;
+  background:#eef1f5;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.65
+}
+
+.page{
+  max-width:980px;
+  margin:34px auto;
+  background:#fff;
+  box-shadow:0 18px 55px rgba(23,32,51,.08)
+}
+
+.hero{
+  padding:58px 66px 46px;
+  background:linear-gradient(135deg,#fff,#f8faff);
+  border-bottom:1px solid var(--line)
+}
+
+.eyebrow{
+  display:inline-block;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:13px
+}
+
+h1{
+  margin:0;
+  font-size:44px;
+  line-height:1.08;
+  letter-spacing:-1.1px
+}
+
+.tagline{
+  margin:12px 0 18px;
+  color:#475467;
+  font-size:17px
+}
+
+.contact{
+  color:var(--muted);
+  font-size:13px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px 13px
+}
+
+.contact a{
+  color:#475467;
+  text-decoration:none
+}
+
+nav{
+  padding:12px 66px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  gap:22px;
+  overflow:auto;
+  white-space:nowrap
+}
+
+nav a{
+  color:#475467;
+  text-decoration:none;
+  font-size:12px;
+  font-weight:650
+}
+
+main{
+  padding:8px 66px 52px
+}
+
+section{
+  padding:30px 0 4px;
+  border-bottom:1px solid var(--line)
+}
+
+section:last-child{
+  border-bottom:0
+}
+
+h2{
+  font-size:19px;
+  line-height:1.25;
+  margin:0 0 13px
+}
+
+h3{
+  margin:0 0 4px;
+  font-size:15px;
+  line-height:1.35
+}
+
+p{
+  font-size:14px;
+  margin:0 0 12px
+}
+
+.lead{
+  font-size:15px;
+  color:#344054
+}
+
+.muted{
+  color:var(--muted)
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:20px;
+  background:#fff
+}
+
+.soft{
+  background:var(--soft)
+}
+
+.meta{
+  font-size:12px;
+  color:var(--muted);
+  margin-bottom:9px
+}
+
+ul{
+  margin:7px 0 0 19px;
+  padding:0;
+  font-size:13.5px
+}
+
+li{
+  margin:5px 0
+}
+
+.membership{
+  display:flex;
+  gap:14px;
+  align-items:flex-start
+}
+
+.badge{
+  flex:0 0 36px;
+  width:36px;
+  height:36px;
+  border-radius:9px;
+  display:grid;
+  place-items:center;
+  background:var(--accentsoft);
+  color:var(--accent);
+  font-weight:800;
+  font-size:12px
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+
+.skill{
+  padding:6px 10px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:#475467;
+  font-size:12px
+}
+
+.callout{
+  background:var(--accentsoft);
+  border:1px solid #dbe5ff;
+  border-radius:10px;
+  padding:20px
+}
+
+footer{
+  padding:22px 66px 32px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:12px
+}
+
+@media(max-width:700px){
+
+  .page{
+    margin:0;
+    box-shadow:none
+  }
+
+  .hero{
+    padding:38px 24px 32px
+  }
+
+  nav{
+    padding:11px 24px
+  }
+
+  main{
+    padding:4px 24px 38px
+  }
+
+  footer{
+    padding:20px 24px 28px
+  }
+
+  h1{
+    font-size:34px
+  }
+
+  .tagline{
+    font-size:15px
+  }
+
+  .grid{
+    grid-template-columns:1fr
+  }
+}
 </style>
 </head>
+
 <body>
-<main class="page">
-<header>
-  <h1>Muhammad Hamza</h1>
-  <p class="subtitle">BS Psychology Student | Research &amp; Behavioral Science | Mixed-Methods Research</p>
-  <div class="contact">
-    Karachi, Pakistan &nbsp;|&nbsp; +92 307 3096389 &nbsp;|&nbsp;
-    <a href="mailto:mhamzahafeez637@gmail.com">mhamzahafeez637@gmail.com</a>
-    &nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/mhamza-psych/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
+
+<div class="page">
+
+<header class="hero">
+
+<div class="eyebrow">
+Psychology · Research · Behavioral Science
+</div>
+
+<h1>
+Muhammad Hamza
+</h1>
+
+<p class="tagline">
+BS Psychology Student | Research & Behavioral Science | Mixed-Methods Research
+</p>
+
+<div class="contact">
+
+<span>Karachi, Pakistan</span>
+<span>·</span>
+
+<a href="mailto:mhamzahafeez637@gmail.com">
+mhamzahafeez637@gmail.com
+</a>
+
+<span>·</span>
+
+<span>+92 307 3096389</span>
+
+<span>·</span>
+
+<a href="https://www.linkedin.com/in/mhamza-psych/" target="_blank">
+LinkedIn
+</a>
+
+</div>
+
 </header>
 
-<section>
-  <h2>About</h2>
-  <p>I am a BS Psychology student at Bahria University's Institute of Professional Psychology with a growing interest in behavioral research and evidence-based work. My experience so far has involved mixed-methods research, primary data collection, quantitative and qualitative analysis, academic writing, and communicating research findings.</p>
-  <p>I am interested in understanding how research can move beyond academic settings and contribute to practical questions about people's wellbeing. I am also interested in developing my knowledge of interdisciplinary areas such as Sexual and Reproductive Health and Rights (SRHR) and the relationship between environmental and social conditions and health.</p>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#experience">Experience</a>
+<a href="#memberships">Memberships</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+
+</nav>
+
+
+<main>
+
+
+<section id="about">
+
+<h2>About</h2>
+
+<p class="lead">
+I’m a BS Psychology student at Bahria University’s Institute of Professional Psychology, interested in understanding human behavior through research as well as applied psychological work.
+</p>
+
+<p>
+My experience so far includes mixed-methods research, primary data collection, quantitative and qualitative analysis, academic writing, clinical settings, and student outreach. I’m especially interested in work that connects behavioral science with real-world questions about wellbeing and society.
+</p>
+
+<p>
+I’m still early in my academic journey, so I’m intentional about learning from each project and building skills that are useful beyond the classroom.
+</p>
+
 </section>
 
-<section>
-  <h2>Research Experience</h2>
-  <div class="card">
-    <h3>Information Overload and Stress Correlation Study</h3>
-    <div class="meta">Bahria University, Karachi &nbsp;|&nbsp; 2026</div>
-    <ul>
-      <li>Investigated the relationship between digital information overload and perceived stress among undergraduate students using a mixed-methods research design.</li>
-      <li>Designed and administered validated psychometric survey scales and structured behavioral observation protocols for primary data collection.</li>
-      <li>Analyzed quantitative and qualitative data to identify patterns related to stress responses, cognitive load, and coping mechanisms.</li>
-      <li>Presented the findings to a faculty review panel, covering the research process from literature review through final analysis.</li>
-    </ul>
-  </div>
+
+<section id="research">
+
+<h2>Research Experience</h2>
+
+<div class="card soft">
+
+<h3>
+Information Overload and Stress Correlation Study
+</h3>
+
+<div class="meta">
+Bahria University, Karachi · 2026
+</div>
+
+<ul>
+
+<li>
+Investigated the relationship between digital information overload and perceived stress among undergraduate students using a mixed-methods research design.
+</li>
+
+<li>
+Designed and administered validated psychometric survey scales and structured behavioral observation protocols for primary data collection.
+</li>
+
+<li>
+Analyzed quantitative and qualitative data to identify patterns related to stress responses, cognitive load, and coping mechanisms.
+</li>
+
+<li>
+Presented the findings to a faculty review panel, covering the research process from literature review through final analysis.
+</li>
+
+</ul>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Clinical &amp; Applied Experience</h2>
-  <div class="card">
-    <h3>Clinical Psychology Intern — Mindspark Consultants Institute</h3>
-    <div class="meta">July–August 2026 &nbsp;|&nbsp; 8 weeks</div>
-    <ul>
-      <li>Worked under supervision to apply Cognitive Behavioral Therapy concepts and the ABC model in client sessions.</li>
-      <li>Practiced structured case documentation and participated in treatment planning discussions.</li>
-      <li>Developed an understanding of how assessment findings are translated into therapeutic approaches.</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h3>Clinical Psychology Intern — Under the supervision of Ms. Zainab Zahid, Clinical Psychologist</h3>
-    <div class="meta">July 2026 &nbsp;|&nbsp; 4 weeks</div>
-    <ul>
-      <li>Assisted with diagnostic and assessment processes involving clients across different age groups.</li>
-      <li>Observed and participated in the application of therapeutic techniques during individual sessions.</li>
-    </ul>
-  </div>
+
+<section id="experience">
+
+<h2>
+Applied Experience
+</h2>
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Clinical Psychology Intern
+</h3>
+
+<div class="meta">
+Mindspark Consultants Institute · July–August 2026 · 8 weeks
+</div>
+
+<ul>
+
+<li>
+Worked under supervision to apply Cognitive Behavioral Therapy concepts and the ABC model in client sessions.
+</li>
+
+<li>
+Practiced structured case documentation and participated in treatment-planning discussions.
+</li>
+
+<li>
+Developed a working understanding of how assessment results can inform therapeutic approaches.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Clinical Psychology Intern
+</h3>
+
+<div class="meta">
+Under the supervision of Ms. Zainab Zahid, Clinical Psychologist · July 2026 · 4 weeks
+</div>
+
+<ul>
+
+<li>
+Assisted with diagnostic and assessment processes involving clients across different age groups.
+</li>
+
+<li>
+Observed and participated in therapeutic techniques during individual sessions.
+</li>
+
+<li>
+Gained practical exposure to how clinical assessment contributes to treatment planning.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Campus Ambassador
+</h3>
+
+<div class="meta">
+Logics Psychological Services · July 2026–Present · Bahria University Karachi Campus
+</div>
+
+<ul>
+
+<li>
+Promote workshops, webinars, and psychological services among students.
+</li>
+
+<li>
+Help connect students with mental-health resources and learning opportunities.
+</li>
+
+<li>
+Encourage participation in psychology-focused events through direct outreach.
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Leadership & Peer Support
+</h3>
+
+<div class="meta">
+Bahria University, Institute of Professional Psychology
+</div>
+
+<ul>
+
+<li>
+Practice active listening and appropriate referral when peers need professional support.
+</li>
+
+<li>
+Mentor junior students on survey design and basic statistical concepts.
+</li>
+
+<li>
+Represent the institute in student events and interdisciplinary academic discussions.
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
 </section>
 
-<section>
-  <h2>Campus &amp; Community Involvement</h2>
-  <div class="card">
-    <h3>Campus Ambassador — Logics Psychological Services</h3>
-    <div class="meta">July 2026–Present &nbsp;|&nbsp; Bahria University Karachi Campus</div>
-    <ul>
-      <li>Promote workshops, webinars, and psychological services among students.</li>
-      <li>Help connect students with mental-health resources and learning opportunities.</li>
-      <li>Encourage participation in psychology-focused events through direct outreach.</li>
-    </ul>
-  </div>
+
+<section id="memberships">
+
+<h2>
+Professional Memberships & Leadership
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card membership">
+
+<div class="badge">
+APA
+</div>
+
+<div>
+
+<h3>
+American Psychological Association — Student Member
+</h3>
+
+<div class="meta">
+Member since 2026 · Active Year: 2027
+</div>
+
+<p class="muted">
+Student membership supporting continued engagement with psychological science, professional learning, and the advancement of psychology.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card membership">
+
+<div class="badge">
+MG
+</div>
+
+<div>
+
+<h3>
+General Member — Mindscape Global
+</h3>
+
+<div class="meta">
+Bahria Chapter (Karachi) · Term 2026–2027 · August 10, 2026
+</div>
+
+<p class="muted">
+Serving as a General Member with the Bahria Chapter, contributing to mental-health awareness, psychological learning, leadership development, and student engagement.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div class="grid" style="margin-top:14px">
+
+
+<div class="card">
+
+<h3>
+Psychological First Aid
+</h3>
+
+<div class="meta">
+Coursera
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+ADHD (Attention-Deficit/Hyperactivity Disorder)
+</h3>
+
+<div class="meta">
+The Open University
+</div>
+
+</div>
+
+
+</div>
+
+
+<p class="muted" style="margin-top:12px">
+Also attended mental-health awareness seminars, including a session focused on men’s mental health.
+</p>
+
 </section>
 
-<section>
-  <h2>Research Interests</h2>
-  <p>Behavioral science · Mixed-methods research · Mental health and wellbeing · Human behavior · Evidence-based practice · Social and environmental determinants of wellbeing · SRHR and interdisciplinary health research</p>
-</section>
 
 <section>
-  <h2>Skills</h2>
-  <div class="skills">
-    <span class="tag">Mixed-Methods Research</span>
-    <span class="tag">Literature Review</span>
-    <span class="tag">Quantitative Analysis</span>
-    <span class="tag">Qualitative Analysis</span>
-    <span class="tag">Survey &amp; Scale Design</span>
-    <span class="tag">Behavioral Observation</span>
-    <span class="tag">Academic Writing</span>
-    <span class="tag">SPSS</span>
-    <span class="tag">Excel</span>
-    <span class="tag">PowerPoint</span>
-    <span class="tag">Canva</span>
-    <span class="tag">Google Workspace</span>
-    <span class="tag">Public Speaking</span>
-    <span class="tag">Teamwork</span>
-  </div>
+
+<h2>
+Research Interests
+</h2>
+
+<div class="callout">
+
+<p style="margin:0">
+
+Behavioral science · Mixed-methods research · Human behavior · Mental health and wellbeing · Evidence-based practice · Social and environmental influences on wellbeing · Interdisciplinary health research · SRHR
+
+</p>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Education</h2>
-  <div class="card">
-    <h3>BS Psychology (Hons)</h3>
-    <div class="meta">Bahria University, Institute of Professional Psychology, Karachi &nbsp;|&nbsp; 2025–Present</div>
-    <p>CGPA: 3.4 / 4.0. Relevant coursework includes Clinical Psychology, Developmental Psychology, Cognitive Psychology, Abnormal Psychology, and Research Methods.</p>
-  </div>
+
+<section id="skills">
+
+<h2>
+Skills
+</h2>
+
+<div class="skills">
+
+<span class="skill">Mixed-Methods Research</span>
+
+<span class="skill">Literature Review</span>
+
+<span class="skill">Survey & Scale Design</span>
+
+<span class="skill">Statistical Analysis</span>
+
+<span class="skill">Qualitative Analysis</span>
+
+<span class="skill">Behavioral Observation</span>
+
+<span class="skill">Academic Writing</span>
+
+<span class="skill">SPSS</span>
+
+<span class="skill">MS Excel</span>
+
+<span class="skill">MS PowerPoint</span>
+
+<span class="skill">MS Word</span>
+
+<span class="skill">Canva</span>
+
+<span class="skill">Google Workspace</span>
+
+<span class="skill">Public Speaking</span>
+
+<span class="skill">Teamwork</span>
+
+<span class="skill">Adaptability</span>
+
+<span class="skill">Active Listening</span>
+
+<span class="skill">Psychological Assessment</span>
+
+<span class="skill">CBT Fundamentals</span>
+
+<span class="skill">Case Documentation</span>
+
+<span class="skill">Ethical Practice</span>
+
+</div>
+
 </section>
 
-<section>
-  <h2>Certifications &amp; Professional Development</h2>
-  <ul>
-    <li>Psychological First Aid — Coursera</li>
-    <li>ADHD (Attention-Deficit/Hyperactivity Disorder) — The Open University</li>
-    <li>Mental health awareness seminars, including a session focused on men's mental health</li>
-  </ul>
+
+<section id="education">
+
+<h2>
+Education
+</h2>
+
+<div class="card">
+
+<h3>
+BS Psychology (Hons)
+</h3>
+
+<div class="meta">
+Bahria University, Institute of Professional Psychology, Karachi · 2025–Present
+</div>
+
+<p>
+<strong>CGPA:</strong> 3.4 / 4.0
+</p>
+
+<p class="muted">
+Relevant coursework: Clinical Psychology, Developmental Psychology, Cognitive Psychology, Abnormal Psychology, and Research Methods.
+</p>
+
+</div>
+
 </section>
+
+
+<section>
+
+<h2>
+Languages
+</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>
+English
+</h3>
+
+<div class="meta">
+Fluent
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Urdu
+</h3>
+
+<div class="meta">
+Native
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Punjabi
+</h3>
+
+<div class="meta">
+Mother tongue
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>
+What I’m Building Toward
+</h2>
+
+<p>
+I’m building a foundation in psychology that combines research, behavioral understanding, and practical experience. At this stage, my focus is less on having every answer and more on becoming someone who can ask useful questions, work carefully with evidence, and keep learning from people and projects around me.
+</p>
+
+</section>
+
+
+</main>
+
 
 <footer>
-  This portfolio presents selected academic and professional experience. Additional information and references are available upon request.
+
+<strong>
+Muhammad Hamza
+</strong>
+
+<br>
+
+BS Psychology · Research & Behavioral Science
+
+<br><br>
+
+References and additional academic material are available upon request.
+
 </footer>
-</main>
+
+
+</div>
+
 </body>
 </html>
